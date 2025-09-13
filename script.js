@@ -7,17 +7,20 @@ function getComputerChoice(){
 }
 
 
-function getHumanChoice(){
-    const answer = prompt("Enter your choice (Rock, Paper or Scissors): ");
-    if (answer.toLowerCase() == "rock"){
-        return "Rock"
-    }else if(answer.toLowerCase() == "paper"){
-        return "Paper"
-    }else if (answer.toLowerCase() == "scissors"){
-        return "Scissors"
-    }
-}
+// function getHumanChoice(){
+//     const answer = prompt("Enter your choice (Rock, Paper or Scissors): ");
+//     if (answer.toLowerCase() == "rock"){
+//         return "Rock"
+//     }else if(answer.toLowerCase() == "paper"){
+//         return "Paper"
+//     }else if (answer.toLowerCase() == "scissors"){
+//         return "Scissors"
+//     }
+// }
 
+const rockBtn = document.createElement("button");
+const paperBrtn = document.createElement("button");
+const scissorsBtn = document.createElement("button");
 
 function playGame(){
     let computerScore = 0;
@@ -25,7 +28,6 @@ function playGame(){
 
     function playRound(computerChoice, humanChoice){
         computerChoice = computerChoice.toLowerCase();
-        humanChoice = humanChoice.toLowerCase();
 
         if ((computerChoice == "rock" && humanChoice == "paper") || (computerChoice == "scissors" && humanChoice == "rock") || (computerChoice == "paper" && humanChoice == "scissors")){
             console.log(`You won the round! ${humanChoice} beats ${computerChoice}.`);
@@ -38,12 +40,9 @@ function playGame(){
         }
     }
 
-    for (let i = 0; i < 5; i++){
-        const computerChoice = getComputerChoice();
-        const humanChoice = getHumanChoice();
-
-        playRound(computerChoice, humanChoice);
-    }
+    rockBtn.addEventListener("click", () =>{
+        
+    });
 
     return{
         computerScore, 

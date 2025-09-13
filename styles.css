@@ -1,0 +1,84 @@
+.background {
+    position: absolute;
+    width: 574px;
+    height: 634px;
+    left: calc(50% - 574px/2);
+    top: calc(50% - 634px/2);
+    background: #18151C;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+}
+
+.stars{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.moon{
+position: absolute;
+width: 180px;
+left: 395px;
+top: 0px;
+}
+
+h1{
+    position: relative;
+    top: 120px;
+    font-family: Pixelify Sans, arial;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+    z-index: 2;
+}
+
+.play-button{
+    
+    font-family: Pixelify Sans, arial;
+    font-size: 24px;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid white;
+    background: none;
+    border-radius: 12px;
+    padding: 4px 10px;
+    align-self: center;
+    margin: 120px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.rules-text{
+    font-family: Anonymous Pro, arial;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    align-self: center;
+    max-width: 488px;
+    margin: -60px;
+    z-index: 2;
+}
+
+.pixel-transition{
+    position: absolute;
+    z-index: 0;
+    margin-top: 118px;
+}
+
+.mountain{
+    z-index: 1;
+    position: absolute;
+    align-self: center;
+    max-width: 773px;
+    margin-left: 20px;
+    justify-content: center;
+    margin-top: -130px;
+
+}
