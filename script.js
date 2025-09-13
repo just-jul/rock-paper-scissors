@@ -1,4 +1,13 @@
 
+const playBtn = document.querySelector(".play-button");
+const startScreen = document.querySelector(".start-screen");
+const gameScreen = document.querySelector(".game-screen");
+
+playBtn.addEventListener("click", ()=>{
+    startScreen.style.display = "none";
+    gameScreen.style.display = "flex";
+});
+
 const values = ["Rock", "Paper", "Scissors"];
 function getComputerChoice(){
     const random = Math.floor(Math.random() * values.length)

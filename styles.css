@@ -1,4 +1,4 @@
-.background {
+.start-screen, .game-screen {
     position: absolute;
     width: 574px;
     height: 634px;
@@ -9,6 +9,10 @@
     flex-direction: column;
     overflow: hidden;
 
+}
+
+.game-screen{
+    display: none;
 }
 
 .stars{
