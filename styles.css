@@ -8,7 +8,6 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-
 }
 
 .game-screen{
@@ -22,10 +21,10 @@
 }
 
 .moon{
-position: absolute;
-width: 180px;
-left: 395px;
-top: 0px;
+    position: absolute;
+    width: 180px;
+    left: 395px;
+    top: 0px;
 }
 
 h1{  
@@ -38,10 +37,9 @@ h1{
     font-size: 48px;
     line-height: 58px;
     text-align: center;
-    z-index: 2;
 }
 
-.play-button{  
+button{
     font-family: Pixelify Sans, arial;
     font-size: 24px;
     color: white;
@@ -51,32 +49,33 @@ h1{
     background: none;
     border-radius: 12px;
     padding: 4px 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.play-button{  
     align-self: center;
     margin: 36px;
-    z-index: 2;
-    cursor: pointer;
 }
 
 .rules-text{
     font-family: Anonymous Pro, arial;
     font-size: 16px;
+    font-weight: 600;
     text-transform: uppercase;
     color: white;
     text-align: center;
     align-self: center;
     max-width: 488px;
     margin: 20px;
-    z-index: 2;
 }
 
 .pixel-transition{
     position: absolute;
-    z-index: 0;
     margin-top: 118px;
 }
 
 .mountain{
-    z-index: 1;
     position: absolute;
     align-self: center;
     max-width: 773px;
@@ -89,8 +88,33 @@ h1{
 .select-text{
     font-family: Anonymous Pro, arial;
     font-size: 16px;
+    font-weight: 600;
     text-transform: uppercase;
     color: white;
     text-align: center;
     align-self: center;
+}
+
+.score  {
+    position: absolute;
+    color: white;
+    font-family: Anonymous Pro, arial;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    align-self: center;
+    margin-top: 24px;
+}
+
+.option-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 82px;
+    gap: 65px;
+}
+
+.option-button{
+
 }
