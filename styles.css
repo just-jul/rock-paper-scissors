@@ -14,6 +14,10 @@
     display: none;
 }
 
+.result-screen{
+    display:none;
+}
+
 .stars{
     position: absolute;
     width: 100%;

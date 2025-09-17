@@ -16,20 +16,12 @@ function getComputerChoice(){
 }
 
 
-// function getHumanChoice(){
-//     const answer = prompt("Enter your choice (Rock, Paper or Scissors): ");
-//     if (answer.toLowerCase() == "rock"){
-//         return "Rock"
-//     }else if(answer.toLowerCase() == "paper"){
-//         return "Paper"
-//     }else if (answer.toLowerCase() == "scissors"){
-//         return "Scissors"
-//     }
-// }
 
-const rockBtn = document.createElement("button");
-const paperBrtn = document.createElement("button");
-const scissorsBtn = document.createElement("button");
+const rockBtn = document.querySelector(".rockBtn");
+const paperBtn = document.querySelector(".paperBtn");
+const scissorsBtn = document.querySelector(".scissorsBtn");
+
+
 
 function playGame(){
     let computerScore = 0;
@@ -39,6 +31,7 @@ function playGame(){
         computerChoice = computerChoice.toLowerCase();
 
         if ((computerChoice == "rock" && humanChoice == "paper") || (computerChoice == "scissors" && humanChoice == "rock") || (computerChoice == "paper" && humanChoice == "scissors")){
+            
             console.log(`You won the round! ${humanChoice} beats ${computerChoice}.`);
             humanScore++;
         }else if (computerChoice === humanChoice){
@@ -50,14 +43,25 @@ function playGame(){
     }
 
     rockBtn.addEventListener("click", () =>{
-        
+        playRound(getComputerChoice(), "rock");
+    });
+    paperBtn.addEventListener("click", () =>{
+        playRound(getComputerChoice(), "paper");
+    });
+    scissorsBtn.addEventListener("click", () =>{
+        playRound(getComputerChoice(), "scissors")
     });
 
     return{
         computerScore, 
         humanScore
     };
-}
+            
+};
+
+
+
+
 
 const scores = playGame();
 
