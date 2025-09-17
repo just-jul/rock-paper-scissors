@@ -1,4 +1,4 @@
-.start-screen, .game-screen {
+.start-screen, .game-screen, .result-screen {
     position: absolute;
     width: 574px;
     height: 634px;
@@ -10,12 +10,16 @@
     overflow: hidden;
 }
 
+
+.start-screen{
+
+}
 .game-screen{
     display: none;
 }
 
 .result-screen{
-    display:none;
+    display: none;
 }
 
 .stars{
@@ -121,4 +125,34 @@ button{
 
 .option-button{
 
+}
+
+
+.congratulations-text{
+    font-family: Anonymous Pro, arial;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    align-self: center;
+    max-width: 488px;
+    margin-top: 150px;
+}
+
+.you-won-text{
+    margin-top: 28px;
+    margin-bottom: 0;
+    font-family: Pixelify Sans, arial;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    font-size: 96px;
+    line-height: 58px;
+    text-align: center;
+}
+
+.play-again-button{
+    align-self: center;
+    margin: 42px;
 }
