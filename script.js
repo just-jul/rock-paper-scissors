@@ -21,7 +21,10 @@ const rockBtn = document.querySelector(".rockBtn");
 const paperBtn = document.querySelector(".paperBtn");
 const scissorsBtn = document.querySelector(".scissorsBtn");
 
+const whoWonText = document.querySelector(".who-won-text");
 
+const humanScoreText = document.querySelector(".human-score");
+const computerScoreText = document.querySelector(".computer-score");
 
 function playGame(){
     let computerScore = 0;
@@ -31,14 +34,15 @@ function playGame(){
         computerChoice = computerChoice.toLowerCase();
 
         if ((computerChoice == "rock" && humanChoice == "paper") || (computerChoice == "scissors" && humanChoice == "rock") || (computerChoice == "paper" && humanChoice == "scissors")){
-            
-            console.log(`You won the round! ${humanChoice} beats ${computerChoice}.`);
+            whoWonText.innerText = `You won the round! ${humanChoice} beats ${computerChoice}.`;
             humanScore++;
+            humanScoreText.innerText = `${humanScore}`;
         }else if (computerChoice === humanChoice){
-            console.log(`It's a draw!`)
+            whoWonText.innerText = `It's a draw!`;
         }else {
-            console.log(`You lost the round! ${computerChoice} beats ${humanChoice}.`)
+            whoWonText.innerText = `You lost the round! ${computerChoice} beats ${humanChoice}.`;
             computerScore++;
+            computerScoreText.innerText = `${computerScore}`;
         }
     }
 

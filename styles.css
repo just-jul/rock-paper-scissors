@@ -115,6 +115,20 @@ button{
     margin-top: 24px;
 }
 
+.who-won-text{
+    position: absolute;
+    color: white;
+    font-family: Anonymous Pro, arial;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: white;
+    align-self: center;
+    margin-top: 48px;
+    max-width: 300px;
+    text-align: center;
+}
+
 .option-section{
     display: flex;
     align-items: center;
