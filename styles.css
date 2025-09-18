@@ -36,8 +36,8 @@
 }
 
 h1{  
-    margin-top: 150px;
-    margin-bottom: 0;
+    margin-top: 132px;
+    margin-bottom: 18px;
     font-family: Pixelify Sans, arial;
     font-weight: 600;
     color: white;
@@ -45,6 +45,16 @@ h1{
     font-size: 48px;
     line-height: 58px;
     text-align: center;
+}
+
+.subtitle{
+    position: absolute;
+    margin: 190px;
+    color: white;
+    text-align: center;
+    align-self: center;
+    font-family: Anonymous Pro, arial;
+    font-weight: 700;
 }
 
 button{

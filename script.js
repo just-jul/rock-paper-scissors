@@ -2,10 +2,17 @@
 const playBtn = document.querySelector(".play-button");
 const startScreen = document.querySelector(".start-screen");
 const gameScreen = document.querySelector(".game-screen");
+const resultScreen = document.querySelector(".result-screen");
+const playAgainBtn = document.querySelector(".play-again-button");
 
 playBtn.addEventListener("click", ()=>{
     startScreen.style.display = "none";
     gameScreen.style.display = "flex";
+});
+
+playAgainBtn.addEventListener("click", ()=>{
+    resultScreen.style.display = "none";
+    startScreen.style.display = "flex";
 });
 
 const values = ["Rock", "Paper", "Scissors"];
@@ -26,6 +33,9 @@ const whoWonText = document.querySelector(".who-won-text");
 const humanScoreText = document.querySelector(".human-score");
 const computerScoreText = document.querySelector(".computer-score");
 
+const winnerTextBig = document.querySelector(".you-won-text");
+const congratulationsText = document.querySelector(".congratulations-text");
+
 function playGame(){
     let computerScore = 0;
     let humanScore = 0;
@@ -44,7 +54,23 @@ function playGame(){
             computerScore++;
             computerScoreText.innerText = `${computerScore}`;
         }
+
+        if(humanScore === 5){
+            gameScreen.style.display = "none";
+            resultScreen.style.display = "flex";
+
+            winnerTextBig.innerText = "You won!";
+            congratulationsText.innerText = "congratulations";
+        }else if(computerScore === 5){
+            gameScreen.style.display = "none";
+            resultScreen.style.display = "flex";
+
+            winnerTextBig.innerText = "You lost!";
+            congratulationsText.innerText = "oh no";
+        }
     }
+
+
 
     rockBtn.addEventListener("click", () =>{
         playRound(getComputerChoice(), "rock");
@@ -56,10 +82,10 @@ function playGame(){
         playRound(getComputerChoice(), "scissors")
     });
 
-    return{
-        computerScore, 
-        humanScore
-    };
+    // return{
+    //     computerScore, 
+    //     humanScore
+    // };
             
 };
 
