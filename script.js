@@ -4,6 +4,7 @@ const startScreen = document.querySelector(".start-screen");
 const gameScreen = document.querySelector(".game-screen");
 const resultScreen = document.querySelector(".result-screen");
 const playAgainBtn = document.querySelector(".play-again-button");
+const roundNumber = document.querySelector(".round-number");
 
 playBtn.addEventListener("click", ()=>{
     startScreen.style.display = "none";
@@ -33,6 +34,9 @@ const computerResultScoreText = document.querySelector(".computer-result-score")
 
 const winnerTextBig = document.querySelector(".you-won-text");
 const congratulationsText = document.querySelector(".congratulations-text");
+
+let currentRound = 1;
+roundNumber.innerText = `Round ${currentRound}`;
 
 function playGame(){
     let computerScore = 0;
@@ -73,7 +77,6 @@ function playGame(){
             humanResultScoreText.innerText = humanScoreText.innerText;
             computerResultScoreText.innerText = computerScoreText.innerText;
         }
-
     }
     rockBtn.addEventListener("click", () =>{
         playRound(getComputerChoice(), "rock");
@@ -97,6 +100,10 @@ function playGame(){
         computerResultScoreText.innerText = `0`;
 
         whoWonText.innerText = "";
+
+        currentRound++;
+        roundNumber.innerText = `Round ${currentRound}`;
+
         resultScreen.style.display = "none";
         gameScreen.style.display = "flex";
     })
