@@ -10,10 +10,6 @@ playBtn.addEventListener("click", ()=>{
     gameScreen.style.display = "flex";
 });
 
-playAgainBtn.addEventListener("click", ()=>{
-    resultScreen.style.display = "none";
-    startScreen.style.display = "flex";
-});
 
 const values = ["Rock", "Paper", "Scissors"];
 function getComputerChoice(){
@@ -32,6 +28,8 @@ const whoWonText = document.querySelector(".who-won-text");
 
 const humanScoreText = document.querySelector(".human-score");
 const computerScoreText = document.querySelector(".computer-score");
+const humanResultScoreText = document.querySelector(".human-result-score");
+const computerResultScoreText = document.querySelector(".computer-result-score");
 
 const winnerTextBig = document.querySelector(".you-won-text");
 const congratulationsText = document.querySelector(".congratulations-text");
@@ -61,17 +59,22 @@ function playGame(){
 
             winnerTextBig.innerText = "You won!";
             congratulationsText.innerText = "congratulations";
+
+            humanResultScoreText.innerText = humanScoreText.innerText;
+            computerResultScoreText.innerText = computerScoreText.innerText;
+
         }else if(computerScore === 5){
             gameScreen.style.display = "none";
             resultScreen.style.display = "flex";
 
             winnerTextBig.innerText = "You lost!";
             congratulationsText.innerText = "oh no";
+
+            humanResultScoreText.innerText = humanScoreText.innerText;
+            computerResultScoreText.innerText = computerScoreText.innerText;
         }
+
     }
-
-
-
     rockBtn.addEventListener("click", () =>{
         playRound(getComputerChoice(), "rock");
     });
@@ -82,21 +85,29 @@ function playGame(){
         playRound(getComputerChoice(), "scissors")
     });
 
-    // return{
-    //     computerScore, 
-    //     humanScore
-    // };
+
+    playAgainBtn.addEventListener("click", ()=>{
+        computerScore = 0;
+        humanScore = 0;
+
+        humanScoreText.innerText = `0`;
+        computerScoreText.innerText = `0`;
+
+        humanResultScoreText.innerText = `0`;
+        computerResultScoreText.innerText = `0`;
+
+        whoWonText.innerText = "";
+        resultScreen.style.display = "none";
+        gameScreen.style.display = "flex";
+    })
+
             
 };
 
 
 
-
-
 const scores = playGame();
 
-console.log(`This is the computer score: ${scores.computerScore}`);
-console.log(`This is the human score: ${scores.humanScore}`);
 
 
 
